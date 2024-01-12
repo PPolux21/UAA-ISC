@@ -1,0 +1,3 @@
+Jose	Perez	Aguascalientes	16/09/1980	pepe12	pepe1234	1
+Julia	Martinez	Aguascalientes	16/09/1996	julia3	julia123	1
+Mario	Gonzales	Aguascalientes	16/09/2000	mario7	mario123	1

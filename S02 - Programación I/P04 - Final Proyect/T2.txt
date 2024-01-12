@@ -1,0 +1,6 @@
+B   F   C   R   P   D
+F   L   N   Q   R   G
+E   I   J   K   N   L
+A   E   B   O   M   I
+G   J   C   O   H   K
+D   H   M   P   Q   A
