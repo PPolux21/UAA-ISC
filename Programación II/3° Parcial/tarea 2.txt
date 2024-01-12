@@ -1,0 +1,134 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+// Clase base Figura
+class Figura {
+	public:
+	    virtual void mostrarInformacion(); // Función virtual pura
+};
+
+// Clase FiguraBidimensional
+class FiguraBidimensional : public Figura {
+public:
+    virtual double obtenerArea() const = 0; // Función virtual pura
+};
+
+// Clase FiguraTridimensional
+class FiguraTridimensional : public Figura {
+public:
+    virtual double obtenerArea() const = 0; // Función virtual pura
+    virtual double obtenerVolumen() const = 0; // Función virtual pura
+};
+
+// Clase Circulo (FiguraBidimensional)
+class Circulo : public FiguraBidimensional {
+private:
+    double radio;
+
+public:
+    Circulo(double _radio) : radio(_radio) {}
+
+    void mostrarInformacion() override {
+        cout << "Circulo con radio: " << radio << endl;
+    }
+
+    double obtenerArea() const override {
+        return M_PI * pow(radio, 2);
+    }
+};
+
+// Clase Cuadrado (FiguraBidimensional)
+class Cuadrado : public FiguraBidimensional {
+private:
+    double lado;
+
+public:
+    Cuadrado(double _lado) : lado(_lado) {}
+
+    void mostrarInformacion() override {
+        cout << "Cuadrado con lado: " << lado << endl;
+    }
+
+    double obtenerArea() const override {
+        return pow(lado, 2);
+    }
+};
+
+// Clase Esfera (FiguraTridimensional)
+class Esfera : public FiguraTridimensional {
+private:
+    double radio;
+
+public:
+    Esfera(double _radio) : radio(_radio) {}
+
+    void mostrarInformacion() override {
+        cout << "Esfera con radio: " << radio << endl;
+    }
+
+    double obtenerArea() const override {
+        return 4 * M_PI * pow(radio, 2);
+    }
+
+    double obtenerVolumen() const override {
+        return (4.0 / 3.0) * M_PI * pow(radio, 3);
+    }
+};
+
+// Clase Cubo (FiguraTridimensional)
+class Cubo : public FiguraTridimensional {
+private:
+    double lado;
+
+public:
+    Cubo(double _lado) : lado(_lado) {}
+
+    void mostrarInformacion() override {
+        cout << "Cubo con lado: " << lado << endl;
+    }
+
+    double obtenerArea() const override {
+        return 6 * pow(lado, 2);
+    }
+
+    double obtenerVolumen() const override {
+        return pow(lado, 3);
+    }
+};
+
+int main() {
+    const int numFiguras = 4;
+    Figura *figuras[numFiguras];
+
+    figuras[0] = new Circulo(5.0);
+    figuras[1] = new Cuadrado(3.0);
+    figuras[2] = new Esfera(4.0);
+    figuras[3] = new Cubo(2.0);
+
+    for (int i = 0; i < numFiguras; ++i) {
+        figuras[i]->mostrarInformacion();
+
+        FiguraBidimensional *figuraBidimensional = dynamic_cast<FiguraBidimensional *>(figuras[i]);
+        if (figuraBidimensional != nullptr) {
+            cout << "Area: " << figuraBidimensional->obtenerArea() << endl;
+        }
+
+        FiguraTridimensional *figuraTridimensional = dynamic_cast<FiguraTridimensional *>(figuras[i]);
+        if (figuraTridimensional != nullptr) {
+            cout << "Area superficial: " << figuraTridimensional->obtenerArea() << endl;
+            cout << "Volumen: " << figuraTridimensional->obtenerVolumen() << endl;
+        }
+
+        cout << "------------------------" << endl;
+    }
+
+    // Liberar memoria
+    for (int i = 0; i < numFiguras; ++i) {
+        delete figuras[i];
+    }
+
+    return 0;
+}

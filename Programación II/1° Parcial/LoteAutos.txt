@@ -1,0 +1,5 @@
+Nissan,Sedan,2018,49,Negro
+Nissan,4x4,2024,44,Gris
+BMW,Sedan,2023,29,Blanco
+Mercedes,Sedan,2021,46,Blanco
+BMW,4x4,2016,49,Azul
