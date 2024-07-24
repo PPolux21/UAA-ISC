@@ -1,6 +1,0 @@
-ISC 	3° Semestre 	Grupo: C
-Estructuras de Datos
-
-Integrantes:
-	- José Luis Espinoza Sánchez
-	- Reyli Uvaldo Martinez Hernandez 
