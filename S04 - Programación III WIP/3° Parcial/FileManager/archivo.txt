@@ -1,2 +1,0 @@
-Wenas, este es un ejemplo de un FileWriter en Java
- :O 
