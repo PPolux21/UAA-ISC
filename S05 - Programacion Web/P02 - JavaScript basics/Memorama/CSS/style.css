@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.3s;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgb(81, 87, 214);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgb(64, 72, 216);  
+    font-family: 'Poppins', sans-serif; 
+
+    letter-spacing: 2px;    
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+}
+
+body{
+    min-height: 100vh;
+    /*-webkit-perspective: 1000;*/
+    /*background-image: url("img/tadeo.jpg"); Aqui pa poner img de fondo*/
+    background-color: rgb(24, 24, 24);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tablero{
+    width: 90%;
+    height: 80%;
+}
+.card-area{
+    display: inline-block;
+    margin: 5px;
+}
+.card-area, .card, .face{
+    width: 116px;
+    height: 150px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: iniciar 0.75s;   /*Tiempo de giro inicial de las cartas*/
+}
+.face{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front{
+    transform: rotateY(180deg);
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 5px;
+    border:2px solid white;
+}
+.back img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    border:3px solid white;
+}
+
+.new-game {
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 30px;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: white;
+
+    color: black;
+    /*border: 3px solid green;  /* Borde verde */
+    box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5);  /* Sombra  */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.new-game:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.05);  /* Agranda pk el boton */
+    box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.8);
+}
+
+/* Animación para el mensaje */
+.winner-message {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5em;
+    font-family: "Micro 5", sans-serif;
+ 
+    color: #000000; /* Verde brillante */
+    background-color: rgba(22, 135, 0, 0.956);
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(115, 246, 115, 0.8);
+    animation: pop-up 0.5s ease forwards;
+}
+@keyframes pop-up {
+    0% {
+        transform: scale(0.5) translate(-50%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes iniciar{
+    20%,90%{
+        transform: rotateY(180deg);
+    }
+    0%,100%{
+        transform:rotateY(0deg);
+    }
+}
+
+
+#winnerMessage {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5em;
+    font-family: "Micro 5", sans-serif;
+ 
+    color: #000000; /* Verde brillante */
+    background-color: rgba(22, 135, 0, 0.956);
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(115, 246, 115, 0.8);
+    animation: pop-up 0.5s ease forwards;
+}
+#contadorVictorias {
+    font-family: 'Poppins', sans-serif; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.848);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*
+#timer {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+*/

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <title>Juego de Trivia</title>
+</head>
+<body>
+
+    <header>
+        <h1>Trivia</h1>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div id="quiz" class="quiz">
+                <h2 id="question" class="question"></h2>
+                <div id="options" class="options"></div>
+                <button id="next" class="hidden quiz-element">Siguiente</button>
+                <div id="feedback" class="quiz-element"></div>
+            </div>
+            <h3 id="score" class="hidden score"></h3>
+            <script src="js/trivia.js"></script>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de memoria</title>
+  <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+  <h1>Juego de Memoria</h1>
+  <div class="tablero" id="tablero">
+  </div>
+  <div id="contadorVictorias" class="contadorVictorias">Victorias: 0</div>
+  <br>
+
+  <div class="new-game" id="button" onclick="generarTablero()">
+    <strong>New Game</strong>
+  </div>
+
+</body>
+
+<script src="js/logica.js"></script>
+
+</html>
