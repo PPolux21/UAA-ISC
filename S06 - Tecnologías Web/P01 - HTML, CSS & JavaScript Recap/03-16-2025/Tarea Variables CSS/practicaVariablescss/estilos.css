@@ -1,0 +1,43 @@
+:root{
+    --azul-claro: #3498db;
+    --verde-claro: #2ecc71;
+    --gris-claro: #f4f4f4;
+    --blanco: #ffffff; /*👍*/
+    --fuente: Arial, sans-serif; /*👍*/
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--gris-claro);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--blanco);
+    border: 3px solid var(--azul-claro);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: var(--azul-claro);
+}
+
+.button {
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: var(--verde-claro);
+}

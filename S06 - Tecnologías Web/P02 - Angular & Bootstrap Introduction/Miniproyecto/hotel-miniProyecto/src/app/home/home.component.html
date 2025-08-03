@@ -1,0 +1,152 @@
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <iframe class="d-block w-100 h-100" [src]="videoCode | domseguro:'https://www.youtube.com/embed/'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        
+      </div>
+      <div class="carousel-item">
+        <img src="img/entrada.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/panoramica1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<section class="presentacion position-relative mt-4">
+    <img src="img/playa.jpg" class="img-fondo w-100" alt="Hotel Los Tres Vagos">
+  
+    <div class="texto-cuadro position-absolute top-50 end-0 translate-middle-y p-5 rounded-4 me-5">
+      <h2 class="display-5 fw-bold text-end" style="color: gold;">Descansa como vago, vive como rey.</h2>
+      <h4 class="mb-4 display-6 fw-bold text-end" style="color: darkgoldenrod;">Hotel Los Tres Vagos</h4>
+      <p class="fs-5 mb-0">
+        Bienvenido a un lugar donde el lujo se encuentra con la tranquilidad.  
+        En el Hotel Los Tres Vagos, cada rincón ha sido diseñado para ofrecerte una experiencia inolvidable.  
+        Desde nuestras elegantes habitaciones con vistas panorámicas, hasta nuestro restaurante gourmet  
+        que fusiona tradición y modernidad, te invitamos a sumergirte en un mundo de confort,  
+        atención personalizada y detalles que marcan la diferencia.<br><br>
+  
+        Ideal tanto para escapadas románticas como para estancias de negocios,  
+        nuestro hotel es un refugio de estilo y serenidad en el corazón del descanso.  
+        Vive el placer de hospedarte en un lugar donde cada huésped es tratado como una obra de arte.  
+        Relájate, respira, y déjate llevar... porque en Los Tres Vagos, el tiempo se detiene para ti.
+      </p>
+    </div>
+</section>
+  
+<section class="ubicacion container mt-5 mb-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.8209836368223!2d-105.23585602503373!3d20.636152401148095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84214575fab7051b%3A0x56cf8c8d9edda9b3!2sHotel%20Las%20Palmas%20by%20the%20Sea%20All%20Inclusive%20Puerto%20Vallarta!5e0!3m2!1ses-419!2smx!4v1746059371795!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-3 display-6 fw-bold">¿Dónde encontrarnos?</h2>
+        <p class="fs-5">
+          El Hotel Los Tres Vagos se encuentra ubicado en una de las zonas más exclusivas y tranquilas de la ciudad,  
+          rodeado de naturaleza y a solo minutos de la playa.  
+          Es el destino perfecto para quienes buscan paz, comodidad y una experiencia inolvidable.
+        </p>
+        <p class="fs-5 fw-semibold">
+           Av. Paraíso #123, Puerto Vallarta
+        </p>
+      </div>
+    </div>
+</section>
+
+<section class="faq-section my-5 px-4">
+  <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+  <mat-accordion multi>
+    @for (lista of preguntas; track lista) {
+      <mat-expansion-panel class="faq animate__animated animate__fadeInUp">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{lista.pregunta}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p class="answer" [innerHTML]="lista.respuesta"></p>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</section>
+
+<section>
+  <h2 class="text-center ">Únete ahora</h2>
+  <p class="text-muted text-center mb-4">Registrate para recibir promociones y notificaciones de eventos especiales.</p>
+  <div class="container w-80 d-flex mb-5 py-4 reactive-form">
+    <form class="w-100 mx-4" [formGroup]="subsForm">
+      <div>
+        <mat-form-field class="w-100">
+          <mat-label>Nombre</mat-label>
+          <input type="text" matInput [formControl]="nameControl" placeholder="Ej. Brandon Ruiz">
+          @if (nameControl.hasError('maxlength')) {
+            <mat-error>Nombre demasiado largo</mat-error>
+          }
+          @if (nameControl.hasError('required')) {
+            <mat-error>Nombre es <strong>necesario</strong></mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <mat-label>Correo</mat-label>
+          <input type="email" matInput [formControl]="emailControl" placeholder="Ex. brandon@tresvagos.com">
+          @if (emailControl.hasError('email')) {
+            <mat-error>Escribir direccion de correo válida</mat-error>
+          }
+          @if (emailControl.hasError('required')) {
+            <mat-error>Correo es <strong>necesario</strong></mat-error>
+          }
+        </mat-form-field>
+
+        <mat-checkbox [formControl]="enableRoomsControl">Me gustaría recibir información sobre ofertas de un habitación específica.</mat-checkbox>
+
+        <mat-form-field class="ms-5 reactive-item mt-2">
+          <mat-label>Habitacion</mat-label>
+          <mat-select [formControl]="roomsControl" [disabled]="!enableRoomsControl.value">
+            @for (hab of habitaciones; track hab) {
+              <mat-option [value]="hab.tipo">{{hab.tipo}}</mat-option>
+            }
+          </mat-select>
+          @if (roomsControl.hasError('required')) {
+            <mat-error><strong>Seleccione</strong> una habitacion</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-checkbox [formControl]="enableDateControl">¿Te interesa recibir información para una fecha en particular?</mat-checkbox>
+
+        <mat-form-field class="ms-5 reactive-item">
+          <mat-label>Fecha</mat-label>
+          <mat-date-range-input [rangePicker]="picker" [dateFilter]="tomorrowOnwards">
+            [matDatepickerFilter]="tomorrowOnwards"
+            <input matStartDate [formControl]="dateStartControl" placeholder="Start date">
+            <input matEndDate [formControl]="dateEndControl" placeholder="End date">
+          </mat-date-range-input>
+          <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+          @if (dateStartControl.invalid) {
+            <mat-error>Fecha de inicio invalida</mat-error>
+          }
+          @if (dateEndControl.invalid) {
+            <mat-error>Fecha de finalizado invalida</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+      <button mat-flat-button [disabled]="subsForm.invalid" class="mt-4" (click)="guardaInfo()">Enviar</button>
+    </form>
+    <div class="w-100 mx-4">
+      <img src="" alt="No sé, una imagen">
+    </div>
+  </div>
+</section>

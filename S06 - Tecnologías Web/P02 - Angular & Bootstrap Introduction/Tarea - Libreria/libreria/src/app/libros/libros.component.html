@@ -1,0 +1,20 @@
+@if (misLibros.length>0) {
+<div class="card-group row row-cols-1 row-cols-lg-6 g-4 mx-5">
+    @for(L of misLibros; track L){
+    <div class="col">
+        <div class="card-group h-100">
+            <img src="{{L.image}}" class="card-img-top imagen" height="320" alt="">
+            <div class="card-body contenido">
+                <h5 class="card-title text-center">{{L.title}}</h5>
+                <p class="card-text text-center text-muted">{{L.author}}</p>
+            </div>
+        </div>
+    </div>
+    }
+</div>  
+}@else {
+<div class="text-center ">
+    <h3>Coincidencias no encontradas con "{{search}}"</h3>
+</div>
+}
+

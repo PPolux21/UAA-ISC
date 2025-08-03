@@ -1,0 +1,13 @@
+.titulo{
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img{
+    margin: auto;
+}

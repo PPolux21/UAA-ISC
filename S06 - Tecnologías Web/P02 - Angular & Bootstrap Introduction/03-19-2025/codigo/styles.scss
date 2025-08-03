@@ -1,0 +1,42 @@
+$colors: (
+    primary: #3498db,
+    success: #2ecc71,
+    warning: #f1c40f,
+    danger: #e74c3c,
+    dark: #2c3e50
+);
+
+@function lightOrDark($color) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+    $brightness: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+    @if ($brightness > 150)
+    {
+        @return darken($color, 20%);
+    } @else {
+        @return lighten($color, 20%);
+    }
+}
+
+@each $name, $color in $colors {
+    .btn-#{$name} {
+        background-color: $color;
+        color: if(lightness($color) > 50, #000, #fff);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: lightOrDark($color);
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .btn-size-#{$i} {
+        font-size: (12px + ($i * 2));
+        padding: (5px + ($i * 2)) (10px + ($i * 3));
+    }
+}

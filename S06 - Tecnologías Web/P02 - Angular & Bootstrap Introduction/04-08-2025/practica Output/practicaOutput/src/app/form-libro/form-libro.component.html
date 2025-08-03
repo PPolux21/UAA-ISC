@@ -1,0 +1,30 @@
+<form class="form-container" [formGroup]="form" (ngSubmit)="enviarLibro()">
+    <div class="form-item">
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="titulo">
+      @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {
+        <div class="error">
+          El título es obligatorio.
+        </div>
+      }
+    </div>
+  
+    <div class="form-item">
+      <label for="autor">Autor:</label>
+      <input id="autor" formControlName="autor">
+      @if (form.get('autor')?.invalid && form.get('autor')?.touched) {
+        <div class="error">
+          El autor es obligatorio.
+        </div>
+      }
+    </div>
+  
+    <button type="submit" [disabled]="form.invalid">Enviar</button>
+
+    @if(exito()){
+      <p>Libro agregado correctamente</p>
+    } @else {
+      <p> </p>
+    }
+</form>
+  

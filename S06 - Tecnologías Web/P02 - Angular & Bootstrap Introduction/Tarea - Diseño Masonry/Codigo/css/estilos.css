@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0 30px;
+    background-color: #24293c;
+}
+
+h1, h3{
+    text-align: center;
+    color: lightgray;
+    margin: 15px 0 20px 0;
+}
+
+h3{
+    color: darkcyan;
+}
+
+.card{
+    min-width: 60px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+.card-img{
+    border-radius: 14px 14px 0 0;
+}

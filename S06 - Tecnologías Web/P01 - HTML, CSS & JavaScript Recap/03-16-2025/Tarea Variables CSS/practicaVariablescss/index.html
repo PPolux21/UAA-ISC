@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Variables CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <h1>Práctica: Implementando Variables en CSS</h1>
+    <p>Modificar el código CSS para reemplazar valores repetidos con variables en :root.</p>
+
+    <div class="card">
+        <h2>titulo</h2>
+        <p>Esta tarjeta tiene estilos fijos. Transforma los valores en variables CSS.</p>
+        <button id="boton" class="button">Cambiar Estilos</button>
+    </div>
+
+    <script>
+        const boton = document.getElementById('boton');
+        
+        boton.addEventListener('click', () => {
+            Swal.fire({
+            title: '¿Cómo me llamaba?',
+            text: 'Ah si, José Luis Espinoza Sánchez',
+            icon: 'success',
+            confirmButtonText: 'Oki'
+            });
+        });
+        //cada vez desciendo más a la locura :O
+    </script>
+</body>
+</html>

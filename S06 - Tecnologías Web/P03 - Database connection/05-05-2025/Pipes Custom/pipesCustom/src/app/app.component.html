@@ -1,0 +1,8 @@
+<h1>Pipes Personalizados</h1>
+<h2>José Luis Espinoza Sánchez</h2>
+
+@for (item of clientes; track item; let i = $index) {
+  <p [ngClass]="{'red': i%2 == 0, ' blue': i%2 != 0}">
+    {{item | capitalizado}}
+  </p>
+}

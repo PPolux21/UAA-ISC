@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.container-clientes{
+    display: flex;
+    flex-direction: row;
+}
+
+app-listado-clientes{
+    width: 100%;
+    margin-right: 55px;
+}

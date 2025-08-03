@@ -1,0 +1,15 @@
+.nav-style{
+    border: 1px solid #adb5bd;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.nav-style li{
+    width: 150px;
+    text-align: center;
+}
+
+.shop-bag{
+    max-width: 50px;
+    margin-right: 25px;
+}

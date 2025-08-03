@@ -1,0 +1,60 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {  
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #AABFE6;    
+    margin: 0;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+header{
+    background-color: #6B96E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom: 2px solid #6C70E6;
+}
+
+header h1{
+    flex: 1;
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+.datos-yo p{
+    margin-right: 25px;
+    text-align: end;
+}
+
+.function-container{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.function-results{
+    min-width: 350px;
+    background-color: #6CBDE6;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;    
+}
+
+.function-results h2{
+    margin-top: 0;
+}
+
+.function-results p{
+    margin-left: 10px;
+    white-space: pre-line;
+}

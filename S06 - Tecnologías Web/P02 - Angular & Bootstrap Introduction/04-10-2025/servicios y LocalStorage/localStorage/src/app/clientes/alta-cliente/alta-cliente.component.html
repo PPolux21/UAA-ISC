@@ -1,0 +1,26 @@
+<div id="container">
+    <h2>Alta Cliente</h2>
+    <p>
+        <span>Nombre:</span>
+        <input type="text" class="form-control"[(ngModel)]="cliente.nombre">
+    </p>
+    <p>
+        <span>ID:</span>
+        <input type="text" class="form-control"[(ngModel)]="cliente.id" disabled="true">
+    </p>
+    <p>
+        <span>Dirección:</span>
+        <input type="text" class="form-control"[(ngModel)]="cliente.dierccion">
+    </p>
+    <p>
+        <span>Grupo:</span>
+        <select [(ngModel)]="cliente.grupo" class="form-select" aria-label="Default select example">
+            @for (grupo of grupos; track grupo) {
+                <option value="{{grupo.id}}">{{grupo.nombre}}</option>
+            }
+        </select>
+    </p>
+    <p>
+        <button type="button" class="btn btn-primary" (click)="this.nuevoCliente()">Guardar</button>
+    </p>
+</div>

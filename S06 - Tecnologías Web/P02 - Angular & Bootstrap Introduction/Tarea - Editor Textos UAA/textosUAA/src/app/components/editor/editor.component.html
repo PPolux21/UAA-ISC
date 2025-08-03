@@ -1,0 +1,42 @@
+<div class="container">
+    <header>
+        <h1>Practicando double binding</h1>
+    </header>
+    <div class="controls">
+        <div class="botones">
+            <button class="entry-button" (click)="enableTextarea()">Agregar Nueva Entrada</button>
+            <button class="clear-button" (click)="clearText()">Limpiar TextArea</button>
+        </div>
+        <div class="option">
+            <label for="font">Tipografía: </label>
+            <select id="font" [(ngModel)]="selectedFont">
+                <option value="Arial">Arial</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </div>
+        <div class="option">
+            <label for="font">Tamaño: </label>
+            <select id="font" [(ngModel)]="selectedSize">
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+            </select>
+        </div>
+        <div class="option">
+            <label for="font">Color: </label>
+            <select id="font" [(ngModel)]="selectedColor">
+                <option value="black">Negro</option>
+                <option value="blue">Azul</option>
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+                <option value="purple">Morado</option>
+            </select>
+        </div>
+    </div>
+    <textarea [style.font-family]="selectedFont" [style.font-size.px]="selectedSize" [style.color]="selectedColor" [(ngModel)]="blogText" [disabled]="!isTextareaEnabled" [style]="'background-color: '+ bgColor +';'" placeholder="Escribe aquí tu entrada..."></textarea>
+</div>

@@ -1,0 +1,39 @@
+.form-item{
+    font-size: 18px;
+}
+
+.form-item input{
+    width: 100%;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+}
+
+.form-container button{
+    width: fit-content;
+    align-self: flex-end;
+    padding: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: goldenrod;
+    border-radius: 10px;
+}
+
+.form-container button:hover{
+    cursor: pointer;
+    background-color: gold;
+    transition: background-color 0.3s ease;
+}
+
+.error{
+    text-align: end;
+    font-weight: bold;
+    color: crimson;
+}

@@ -1,0 +1,33 @@
+.seccion-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+  
+.servicio {
+    width: 25%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+  
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 0;
+}
+  

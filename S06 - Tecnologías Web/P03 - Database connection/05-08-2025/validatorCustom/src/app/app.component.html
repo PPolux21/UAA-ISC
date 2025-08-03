@@ -1,0 +1,101 @@
+<h1 class="text-center text-bold pt-4 mb-3">José Luis Espinoza Sánchez</h1>
+
+<form [formGroup]="formulario" class="container mt-5 p-4 formulario">
+  <div>
+    <label class="form-label" for="nombre">Nombre:</label>
+    <input class="form-control" type="text" id="nombre" [formControl]="nombreControl">
+    @if (nombreControl.invalid && nombreControl.touched) {
+      <div class="alert alert-danger p-1 mt-3" role="alert">
+        @if (nombreControl.errors?.['required']) {
+          <div class="text-danger-emphasis">El nombre es requerido.</div>
+        }
+        @if (nombreControl.errors?.['minlength']) {
+          <div class="text-danger-emphasis">El nombre debe tener al menos 3 caracteres.</div>
+        }
+        @if (nombreControl.errors?.['maxlength']) {
+          <div class="text-danger-emphasis">El nombre no puede tener más de 50 caracteres.</div>
+        }
+        @if (nombreControl.errors?.['caracteresEspeciales']) {
+          <div class="text-danger-emphasis">El nombre no puede contener caracteres especiales.</div>
+        }
+      </div>
+    }
+  </div>
+
+  <div>
+    <label class="form-label" for="email">Email:</label>
+    <input class="form-control" type="email" id="email" [formControl]="emailControl">
+    @if (emailControl.invalid && emailControl.touched) {
+      <div class="alert alert-danger p-1 mt-3" role="alert">
+        @if (emailControl.errors?.['required']) {
+          <div class="text-danger-emphasis">El email es requerido.</div>
+        }
+        @if (emailControl.errors?.['email']) {
+          <div class="text-danger-emphasis">El email no es válido.</div>
+        }
+        @if (emailControl.errors?.['pattern']) {
+          <div class="text-danger-emphasis">El email no tiene el formato correcto.</div>
+        }
+      </div>
+    }
+  </div>
+
+  <div>
+    <label class="form-label" for="Password">Password:</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        [type]="mostrarPassword ? 'text' : 'password'"
+        id="Password"
+        [formControl]="passwordControl">
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        (click)="mostrarPassword = !mostrarPassword">
+        <i class="bi" [ngClass]="mostrarPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+      </button>
+    </div>
+    @if (passwordControl.invalid && passwordControl.touched) {
+      <div class="alert alert-danger p-1 mt-3" role="alert">
+        @if (passwordControl.errors?.['required']) {
+          <div class="text-danger-emphasis">La contraseña es requerido.</div>
+        }
+        @if (passwordControl.errors?.['minlength']) {
+          <div class="text-danger-emphasis">El nombre debe tener al menos 12 caracteres.</div>
+        }
+      </div>
+    }
+  </div>
+
+  <div>
+    <label class="form-label" for="PasswordRep">Confirm Password:</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        [type]="mostrarPasswordRep ? 'text' : 'password'"
+        id="PasswordRep"
+        [formControl]="passwordRepControl">
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        (click)="mostrarPasswordRep = !mostrarPasswordRep">
+        <i class="bi" [ngClass]="mostrarPasswordRep ? 'bi-eye-slash' : 'bi-eye'"></i>
+      </button>
+    </div>
+    @if (passwordRepControl.invalid && passwordRepControl.touched) {
+      <div class="alert alert-danger p-1 mt-3" role="alert">
+        @if (passwordRepControl.errors?.['required']) {
+          <div class="text-danger-emphasis">La contraseña es requerido.</div>
+        }
+        @if (passwordRepControl.errors?.['minlength']) {
+          <div class="text-danger-emphasis">El nombre debe tener al menos 12 caracteres.</div>
+        }
+        @if (passwordRepControl.errors?.['isValid']) {
+          <div class="text-danger-emphasis">Las contraseñas deben ser iguales.</div>
+        }
+      </div>
+    }
+  </div>
+
+  <button class="mt-4 btn btn-primary" type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>

@@ -1,0 +1,13 @@
+.copyright p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #155fa5;
+}
+
+.copyright a:hover{
+    text-decoration: underline;
+}

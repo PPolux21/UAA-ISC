@@ -1,0 +1,19 @@
+<h2>José Luis Espinoza Sánchez</h2>
+
+<br>
+<h1>Directiva ngStyle</h1>
+<p>El uso de ngStyle permite aplicar estilos en la línea de manera dinámica</p>
+<p>Lo importante es que los estilos pueden depender de propiedades o variables que estan en tu componente</p>
+<div [ngStyle]="{'color': color, 'font-size.px':fontSize}">
+  <p>Este texto cambia de color y tamaño de manera dinámica</p>
+</div>
+<button (click)="changeStyle()">Cambiar estilo</button>
+<br>
+
+<h1>Directiva ngClass</h1>
+<p>El uso de ngClass permite aplicar o quitar clases de css de manera dinámica</p>
+<p>se usa para plicar o eliminar clases de css de forma condicional</p>
+<div [ngClass]="{'highlight': isHighlighted, 'italic': isItalic}">
+  <p>Este texto cambia de clase dinamicamente</p>
+</div>
+<button (click)="toggleClass()">Cambiar calse</button>

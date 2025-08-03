@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 70px;
+}
+
+.red{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.blue{
+    color: blue;
+    font-size: 20px;
+}

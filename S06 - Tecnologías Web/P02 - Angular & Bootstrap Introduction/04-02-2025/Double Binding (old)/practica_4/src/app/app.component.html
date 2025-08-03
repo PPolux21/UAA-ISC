@@ -1,0 +1,43 @@
+<div class="caja">
+  <div class="container m-3 operaciones">
+    <h2>Operaciones</h2>
+    <p>José Luis Espinoza Sánchez</p>
+
+    <div class="form-group row">
+        <label for="num1">Numero1:&nbsp;&nbsp;</label>
+        <div>
+            <input [(ngModel)]="n1" type="number" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="num2">Numero2:&nbsp;&nbsp;</label>
+        <div>
+            <input [(ngModel)]="n2" type="number" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="op">Operador (+,-,*):&nbsp;&nbsp;</label>
+        <div>
+            <input [(ngModel)]="op" type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="resultado">Resultado:&nbsp;&nbsp;</label>
+        <div>
+            <input type="text" class="form-control" disabled value="{{resultado}}">
+        </div>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td><button type="button" class="btn btn-primary" (click)="ejecutar()">Ejecutar</button></td>
+                <td><button type="button" class="btn btn-secondary" (click)="limpiar()">Limpiar</button></td>
+            </tr>
+        </table>
+    </div>
+  </div>
+</div>

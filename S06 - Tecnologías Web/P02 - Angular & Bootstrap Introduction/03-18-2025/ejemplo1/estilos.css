@@ -1,0 +1,19 @@
+* {
+  font-family: Lato;
+  padding: 50px;
+}
+
+body {
+  background-color: #444;
+}
+
+h1 {
+  color: #444;
+  background-color: white;
+  width: 400px;
+}
+
+p {
+  width: 400px;
+  color: white;
+}/*# sourceMappingURL=estilos.css.map */

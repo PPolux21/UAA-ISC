@@ -1,0 +1,43 @@
+<div id="titulo">
+  <h1 class="display-5 fw-bold">Practica API en Componente</h1>
+  <h1 class="h5 fw-bold">José Luis Espinoza Sánchez</h1>
+  <button class="btn btn-success" (click)="recuperarDatos()">Recuperar datos INEGI</button>
+</div>
+<br />
+@if (array.length!=0) {
+  <div id="mitabla">
+    <table class="table table-danger table-striped-columns table-hover">
+      <thead>
+        <tr>
+          <th scope="col" colspan="7" style="text-align: center;">
+            Tabla de Datos de INEGI
+          </th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Abreviatura</th>
+          <th scope="col">Poblacion</th>
+          <th scope="col">Poblacion Femenina</th>
+          <th scope="col">Poblacion Masculina</th>
+          <th scope="col">Vivienda</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (i of array; track i) {
+          <tr>
+            <td>{{i.cve_agee}}</td>
+            <td>{{i.nom_agee}}</td>
+            <td>{{i.nom_abrev}}</td>
+            <td>{{i.pob}}</td>
+            <td>{{i.pob_fem}}</td>
+            <td>{{i.pob_mas}}</td>
+            <td>{{i.viv}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}

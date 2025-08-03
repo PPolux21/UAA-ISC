@@ -1,0 +1,74 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {  
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #BEE6CD;
+    margin: 0;
+}
+
+header{
+    background-color: #7DE6A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 15vh;
+}
+
+header h1{
+    flex: 1;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+.datos-yo p{
+    margin-right: 25px;
+    text-align: end;
+}
+
+textarea{
+    background-color: #BEE6CD;
+    margin-top: 40px;
+    height: 250px;
+    width: 700px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.container{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.botones button{
+    background-color: #7CE6C8;
+    border: 2px solid #A2E67C;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 200px;
+    font-size: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.botones button:hover{
+    cursor: pointer;
+    background-color: #A2E67C;
+    transform: scale(1.03);
+}

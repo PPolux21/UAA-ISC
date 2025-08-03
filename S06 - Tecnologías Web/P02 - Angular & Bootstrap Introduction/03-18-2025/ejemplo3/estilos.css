@@ -1,0 +1,18 @@
+h1 {
+  color: white;
+  font-size: 40px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  background-color: blue;
+  text-transform: uppercase;
+}
+
+body {
+  padding: 50px;
+  width: 900px;
+}/*# sourceMappingURL=estilos.css.map */

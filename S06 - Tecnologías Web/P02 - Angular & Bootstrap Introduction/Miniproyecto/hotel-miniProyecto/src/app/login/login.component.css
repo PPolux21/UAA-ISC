@@ -1,0 +1,57 @@
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+  
+.example-right-align {
+    text-align: right;
+}
+  
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+  
+input.example-right-align {
+    -moz-appearance: textfield;
+}
+
+.contenedorLogin{
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenedorLogin i{
+    font-size: 70px;
+    padding: 2rem;
+}
+
+.presentacion {
+    height: 500px;
+    /*height: 300px;*/
+    overflow: hidden;
+    position: relative;
+
+    justify-content: center;
+}
+  
+.img-fondo {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #aaa;
+}
+  
+.texto-cuadro {
+    max-width: 800px;
+    max-height: 600px;
+    background-color: rgba(33, 33, 33, 0.8); 
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}

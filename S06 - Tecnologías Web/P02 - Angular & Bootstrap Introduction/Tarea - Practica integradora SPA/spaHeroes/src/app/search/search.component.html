@@ -1,0 +1,11 @@
+@if(indice ==-1){
+    <div class="row animate__animated animate__backInLeft">
+        <div class="co-md-12">
+            <div class="alert alert-info" role="alert">
+                No existen resultados de {{nombreh}}
+            </div>
+        </div>
+    </div>
+}@else{
+    <app-unheroe [heroe]="miHeroe"></app-unheroe>
+}

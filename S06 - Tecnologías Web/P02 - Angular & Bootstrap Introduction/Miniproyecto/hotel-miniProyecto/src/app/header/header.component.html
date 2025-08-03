@@ -1,0 +1,12 @@
+<!-- <h1>Hotel los tres vagos</h1> -->
+<!-- <h1><img src="img/logo1.png" style="width: 30px; height: 30px;"><strong style="color: ;">Hotel los tres vagos</strong></h1> -->
+ <!-- <h1>Hotel los tres vagos</h1> -->
+  
+ <header class="header d-flex justify-content-around align-items-center">
+    <div></div>
+    <img class="animate__animated animate__lightSpeedInRight" src="img/logoGolden.png">
+    <!-- <h1 class="metalico animate__animated animate__rollIn">Hotel los Tres Vagos</h1> -->
+    <button class="d-flex flex-column" (click)="toLogin()">
+        <i class="fa-solid" [ngClass]="{'fa-right-to-bracket': !iconLogged, 'fa-circle-user': iconLogged}"></i>{{nombreUsuario}}
+    </button>
+</header>

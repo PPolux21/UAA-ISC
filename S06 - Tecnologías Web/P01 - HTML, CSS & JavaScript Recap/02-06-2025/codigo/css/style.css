@@ -1,0 +1,44 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {  
+    box-sizing: inherit;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: indigo;
+    color: bisque;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+    margin-top: 0;
+    padding-top: 21.44px;
+}
+
+.container-dummie{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dummie{
+    color: lightcoral;
+    background-color: darkmagenta;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.datos-yo p{
+    text-align: center;
+}

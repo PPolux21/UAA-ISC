@@ -1,0 +1,25 @@
+<div class="rounded-4 bg-light p-4">
+    <h1 class="animate__animated animate__bounce">{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+    <hr>
+
+    <div class="row animated fadeIn fast">
+        <div class="col-md-4 text-center">
+            <img width="300px" src="{{heroe.img}}" alt="" class="img-fluid">
+            <br><br>
+            <a [routerLink]="['/carros']" class="btn btn-outline-danger btn-block">Regresar</a>
+        </div>
+
+        <div class="col-md-8">
+            <h3>{{heroe.nombre}}</h3>
+            <hr>
+            <p>
+                {{heroe.bio}}
+            </p>
+
+            <div>
+                <img src="assets/img/{{heroe.casa}}.png" height="100px" alt="{{heroe.casa}}">
+            </div>
+        
+        </div>
+    </div>
+</div>

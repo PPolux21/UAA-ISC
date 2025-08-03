@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "app/themes/burlywoodtheme.css";
+
+html, body { 
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root, app-user-control, app-admin-control{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.contenedor, .contenedor *{
+    background-color: #C4C3C1;
+}
+
+app-navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+app-footer, app-footer *{
+    background-color: #000277;
+    color: white;
+}

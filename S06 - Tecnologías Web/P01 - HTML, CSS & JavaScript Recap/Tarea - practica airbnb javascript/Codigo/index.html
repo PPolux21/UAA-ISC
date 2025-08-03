@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica airbnb javascript</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="header-img"></div>
+        <div class="nav-links">
+            <a href="#">Tu espacio en Airbnb</a>
+            <a href="#">Regístrate</a>
+        </div>
+    </header>    
+    
+    <section class="trip">
+        <div class="trip-overlay"></div>
+
+        <div class="trip-container">
+            <div class="trip-info">
+                <h1>Encuentra lugares para quedarte en Monaco</h1>
+                <p>Ya sea que busques una cabaña, un departamento en un complejo o un castillo, en Airbnb encontrarás la escapada ideal.</p>
+                <form>
+                    <div class="trip-form">
+                        <label for="ubicación">Ubicación</label>
+                        <input type="text" id="ubicación" placeholder="Escribe un destino">
+                    </div>
+
+                    <div class="trip-date trip-form">
+                        <div>
+                            <label for="llegada">Llegada</label>
+                            <input type="date" id="llegada" class="trip-input-left">
+                        </div>
+                        <div>
+                            <label for="salida" class="trip-label-right">Salida</label>
+                            <input type="date" id="salida" class="trip-input-right">
+                        </div>
+                    </div>
+
+                    <div class="trip-guests trip-form">
+                        <div>
+                            <label for="adultos">Adultos</label>
+                            <input type="number" id="adultos" value="0" class="trip-input-left" min="0">
+                        </div>
+                        <div>
+                            <label for="niños" class="trip-label-right">Niños</label>
+                            <input type="number" id="niños" value="0" class="trip-input-right" min="0" >
+                        </div>
+                    </div>
+                </form>   
+                <input onclick="button_click()" type="button" value="Buscar" class="trip-button">             
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>José Luis Espinoza Sánchez</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

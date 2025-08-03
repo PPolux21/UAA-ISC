@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Rompecabezas Drag and Drop</h2>
+    <h3>José Luis Espinoza Sánchez</h3>
+    <p id="mensaje">Arrastra las piezas a su posición correcta.</p>
+    <div class="container">
+        <div class="pieces">
+            <div class="piece" id="p1" draggable="true" >
+                <img src="media/puzzle1.jpg" alt="">
+            </div>
+            <div class="piece" id="p2" draggable="true"  ">
+                <img src="media/puzzle2.jpg" alt="">
+            </div>
+            <div class="piece" id="p3" draggable="true"  ">
+                <img src="media/puzzle3.jpg" alt="">
+            </div>
+            <div class="piece" id="p4" draggable="true"  ">
+                <img src="media/puzzle4.jpg" alt="">
+            </div>
+        </div>
+        <div class="board">
+            <div class="dropzone" data-id="p1"></div>
+            <div class="dropzone" data-id="p2"></div>
+            <div class="dropzone" data-id="p3"></div>
+            <div class="dropzone" data-id="p4"></div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="reset" style="display: none;">Reiniciar</button>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

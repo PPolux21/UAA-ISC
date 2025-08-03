@@ -1,0 +1,28 @@
+*{
+    font-family: Lato;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 60px 0;
+
+    li{
+        display: inline-block;
+        a{
+            text: {
+                decoration: none;
+                transform: uppercase;
+                align: center;
+            }
+            font: {
+                family: sans-serif;
+                size: 25px
+            }
+
+            color: white;
+            padding: 20px;
+            background-color: rgb(221, 15, 166);
+        }
+    }
+}

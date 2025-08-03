@@ -1,0 +1,25 @@
+<div id="titulo">
+  <h1 class="display-5 fw-bold text-light ">Practica API en Beeceptor</h1>
+  <h1 class="h5 fw-bold text-light">José Luis Espinoza Sánchez</h1>
+  <button class="btn btn-success" (click)="recuperarDatos()">Recuperar datos</button>
+</div>
+<br />
+@if (array.length!=0) {
+  <div id="mitabla" class="mb-4">
+    <h5 class="text-center text-light">Cars go vroom vroom</h5>
+    <div class="card-group row row-cols-1 row-cols-lg-3 g-4">
+        @for (h of array; track h) {
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{h.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{h.nombre}}</h5>
+                    <p class="card-text">{{h.bio}}</p>
+                    <p class="card-text"><small class="text-muted">{{h.aparicion}}</small></p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+  </div>
+}

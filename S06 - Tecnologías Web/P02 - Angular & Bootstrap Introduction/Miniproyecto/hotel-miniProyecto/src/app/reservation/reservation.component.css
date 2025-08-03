@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('/img/fondo-prueba.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.contenedor-reservacion {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-reservacion h2 {
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+form {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-fluid {
+  width: 670px!important;
+  height: 500px!important;
+  display: block;
+  position: absolute;
+  left: 800px;
+  top: 360px;
+  border-radius: 0 1rem 1rem 0;
+  
+}
+
+

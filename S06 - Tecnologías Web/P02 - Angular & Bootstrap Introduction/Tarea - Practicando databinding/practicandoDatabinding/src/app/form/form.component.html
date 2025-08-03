@@ -1,0 +1,38 @@
+<form class="container bg-secondary-subtle rounded-4 p-3">
+    <div>
+        <div class="d-flex flex-row justify-content-between mb-3">
+            <p class="m-0 text-uppercase fw-bold text-form">Huéspedes</p>
+            <div class="d-flex flex-row align-istems-center">
+                <button type="button" class="bg-light rounded-circle border border-dark circular-button fw-bold" (click)="menosHuesped()">-</button>
+                <p class="number-space m-0">{{huespedNum}}</p>
+                <button type="button" class="bg-light rounded-circle border border-dark circular-button fw-bold" (click)="masHuesped()">+</button>
+          
+              </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between mb-3">
+            <p class="m-0 text-uppercase fw-bold text-form">Noches</p>
+            <div class="d-flex flex-row align-istems-center">
+                <button type="button" class="bg-light rounded-circle border border-dark circular-button fw-bold" (click)="menosNoche()">-</button>
+                <p class="number-space m-0">{{nochesNum}}</p>
+                <button type="button" class="bg-light rounded-circle border border-dark circular-button fw-bold" (click)="masNoche()">+</button>
+              </div>
+        </div>
+    </div>
+    <div class="border-top border-dark mx-2"></div>
+    <div>
+        <p class="fw-bold fs-5">EXTRAS</p>
+        @for (extra of extras; track extra) {
+            <div class="form-check mb-3">
+                <input class="form-check-input border border-dark-subtle"type="checkbox" value="" id="checkDefault" [(ngModel)]="extra.marcado" [ngModelOptions]="{standalone: true}" (click)="extraAction(extra.nombre)">
+                <label class="form-check-label text-uppercase" for="checkDefault">{{extra.nombre}}</label>
+            </div>
+        }
+    </div>
+    <div class="border-top border-dark mx-2"></div>
+    <div class="d-flex flex-row justify-content-between align-istems-center my-3">
+        <p class="text-uppercase fw-bold">Total con impuestos</p>
+        <p class="fs-5 fw-bold">${{total}}.00 MXN</p>
+    </div>
+
+    <button type="button" class="btn btn-secondary w-100" (click)="reserv()">Reservar</button>
+</form>

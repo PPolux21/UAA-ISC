@@ -1,0 +1,33 @@
+<div class="contenedor-main">
+  <header>José Luis Espionoza Sánchez</header>
+  <h1>Sistema de votación</h1>
+  <div class="d-flex py-5">
+    <div class="contenedor-votos">
+      <h2>Slecciona al candidato</h2>
+      <div class="candidatos">
+        <app-candidato (votoRegistrado)="sumaVoto($event)" [value]="candidatos[0]"></app-candidato>
+        <app-candidato (votoRegistrado)="sumaVoto($event)" [value]="candidatos[1]"></app-candidato>
+        <app-candidato (votoRegistrado)="sumaVoto($event)" [value]="candidatos[2]"></app-candidato>
+      </div>
+    </div>
+    <div class="contenedor-res mx-5">
+      <h2>Resultados parciales</h2> 
+      <ul class="lista-usuarios">
+        <li>
+          <span class="nombre" [innerHTML]="candidatos[0]"></span>
+          <span class="badge" [innerHTML]="voto1Candidato"></span>
+        </li>
+        <li>
+          <span class="nombre" [innerHTML]="candidatos[1]"></span>
+          <span class="badge" [innerHTML]="voto2Candidato"></span>
+        </li>
+        <li>
+          <span class="nombre" [innerHTML]="candidatos[2]"></span>
+          <span class="badge" [innerHTML]="voto3Candidato"></span>
+        </li>
+      </ul> 
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="finishVoting()">Finalizar votación</button>
+  <p class="fs-4 mt-5" [innerHTML]="result"></p>
+</div>

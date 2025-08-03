@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="d-flex justify-content-center align-items-center">
+        <img class="rounded-4" width="650px" height="400px" [src]="imagenHigh" alt="">
+    </div>
+    <div class="img-low-res row my-3">
+        <div class="col-3"></div>
+        <div class="col-2">
+            <img class="rounded-3 border border-dark-subtle" (click)="cambiarImg('monaco')" width="100px" height="65px" src="/monaco.jpg" alt="">
+        </div>
+        <div class="col-2">
+            <img class="rounded-3 border border-dark-subtle" (click)="cambiarImg('suzuka')" width="100px" height="65px" src="/suzuka.webp" alt="">
+        </div>
+        <div class="col-2">
+            <img class="rounded-3 border border-dark-subtle" (click)="cambiarImg('spa')" width="100px" height="65px" src="/spa.jpg" alt="">
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

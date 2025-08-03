@@ -1,0 +1,12 @@
+.candidato{
+    padding: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    border-radius: 15px;
+}
+
+.candidato:hover{
+    cursor: pointer;
+    background-color: coral;
+}

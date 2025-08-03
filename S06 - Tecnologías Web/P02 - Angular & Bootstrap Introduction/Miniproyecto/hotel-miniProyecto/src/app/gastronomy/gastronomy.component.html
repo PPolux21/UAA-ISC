@@ -1,0 +1,41 @@
+<section class="presentacion position-relative">
+  <img src="img/fondo-gastronomia.jpg" class="img-fondo w-100" alt="Habitaciones">
+
+  <div class="texto-cuadro position-absolute top-50 end-0 translate-middle-y p-5 rounded-4 me-5">
+    <h2 class="mb-4 display-5 fw-bold animate__animated animate__lightSpeedInRight"  style="color: gold;">Restaurantes</h2>
+    <p class="fs-5 mb-0 animate__animated animate__rotateInUpLeft ">
+      Una experiencia culinaria que despierta los sentidos. En nuestro restaurante, los sabores tradicionales se reinventan con un toque de modernidad, dando vida a platillos únicos preparados con ingredientes frescos y locales. 
+      Cada comida es una celebración, acompañada por un ambiente sofisticado y un servicio impecable. 
+      Disfruta desde un desayuno reconfortante hasta una cena gourmet, en un espacio donde cada bocado cuenta una historia.
+    </p>
+  </div>
+</section>
+
+<section class="d-flex flex-column align-items-center">
+  @for (restaurant of restaurants; track restaurant; let i = $index) {
+    <div
+      class="d-flex justify-content-center align-items-center p-3 gap-3 m-3 rounded rounded-3 contRest"
+      [ngClass]="{
+        'flex-row-reverse': i % 2 === 1,
+        'animate__animated': true,
+        'animate__backInLeft': i % 2 === 0,
+        'animate__backInRight': i % 2 === 1
+      }"
+    >
+      <div class="contenedorImg">
+        <img class="rounded" [src]="restaurant.imagen" [alt]="restaurant.nombre" />
+      </div>
+      <div class="contenedorTexto mx-5">
+        <h3 [innerHTML]="restaurant.nombre" class="text-center"></h3>
+        <p [innerHTML]="restaurant.descripcion"></p>
+        @for (horario of restaurant.horarios; track horario) {
+          <p [innerHTML]="horario" class="text-center"></p>
+        }
+      </div>
+    </div>
+  }
+</section>
+
+<section class="d-flex flex-column align-items-center">
+  <a class="nav-link" [routerLink]="getRoutes('saucer')" routerLinkActive="active">Mira nuestros mejores platillos</a>
+</section>

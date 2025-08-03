@@ -1,0 +1,50 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: darkslategrey;
+    color: azure;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 21.44px;
+}
+
+.container-ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.ubicacion{
+    background-color: cadetblue;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#map{
+    margin-top: 25px;
+    height: 45vh;
+    width: 45vw;
+    display: none;
+    border-radius: 15px;
+}
+
+footer{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>
+    Personas almacenadas
+  </h3>
+  <div class="form-group">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="d-flex justify-content-center">
+            <a href="javascript:void(0)" class="icon-button" (click)="fnNewPerson()">
+              <i class="fas fa-plus-circle"></i>
+            </a>
+          </th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Contacto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of _persons | async">
+          <!-- es una suscripción a un observable via async -->
+          <td>
+            <a href="javascript:void(0)" class="icon-button mx-2" (click)="fnEditPerson(person)">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a href="javascript:void(0)" class="icon-button mx-1" (click)="fnDeletePerson(person)">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+          <td>{{ person._name }}</td>
+          <td>{{ person._lastname }}</td>
+          <td>{{ person._contact }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

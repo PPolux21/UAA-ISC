@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    /*
+    Establece el margen en 0
+    */
+}
+
+#name{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /*
+    Establece la fuente a usar en los elementos dentro de la etiqueta con el id
+    Hace que todos los elementos internos se acomoden con flex
+    Hace que como hijo de un flex se acomode en un espacio de 1
+    Centra sus elementos hijos en el eje horizontal (predeterminado de flex)
+    */
+}
+
+.menu-main{
+    background: #dc647c;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid crimson;
+    height: 45px;
+    /*
+    Establece el color de fondo a "#3b5998"
+    Hace que todos los elementos internos se acomoden con flex
+    Acomoda sus elementos horizontalmente con space-between 
+        (se dispersan los elementos dejando espacio con los bordes)
+    Crea un borde inferior de grosor de 1px, con estilo solido y color "royalblue"
+    Establedce una altura fija de 45px
+    */
+}
+
+.menu-main a:hover{
+     background: rgba(0, 0, 0, .5);
+    /*
+    Establece el color de fondo en rgba en (0, 0, 0, .5)
+        cuando se hace hover sobre el elemento "a"
+    */
+}
+
+.menu-main a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /*
+    Define la fuente del texto
+    Establece el color del texto en "#ffffff"
+    Elimina cualquier decoración en el texto
+    Define el tamaño del texto en 12px
+    Hace que el texto se vea en negrita
+    Se convierte en un contenedor de tipo flex
+    Centra los elementos horizontalmente (predeterminado de flex)
+    Centra los elementos verticalmente
+    Hace que se acomode en un espacio de 1
+    */
+}

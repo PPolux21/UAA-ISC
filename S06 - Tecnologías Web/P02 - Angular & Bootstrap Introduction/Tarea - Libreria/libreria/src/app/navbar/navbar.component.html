@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg pt-3 mb-4">
+    <div class="container-fluid fs-5 d-flex justify-content-between align-items-center p-0">
+      <a class="navbar-brand fs-2 px-4" [routerLink]="['/libreria']" (click)="recargarPagina($event)">
+          <i class="fa-solid fa-book-open"></i>
+          Rincón<strong>Sabio</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 nav-style">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Evento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/libreria']">Libreria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cuenta']">Mi Cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mis Favoritos</a>
+          </li>
+          <li class="nav-item shop-bag">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

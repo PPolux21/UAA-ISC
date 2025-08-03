@@ -1,0 +1,11 @@
+<header>José Luis Espionoza Sánchez</header>
+
+<div class="contenedor">
+  <div class="gambling">
+    <app-dado [valor]="valor1"></app-dado>
+    <app-dado [valor]="valor2"></app-dado>
+    <app-dado [valor]="valor3"></app-dado>
+  </div>
+  <button (click)="tirar()">Tirar</button>
+  <p>Resultado: {{resultado}}</p>
+</div>

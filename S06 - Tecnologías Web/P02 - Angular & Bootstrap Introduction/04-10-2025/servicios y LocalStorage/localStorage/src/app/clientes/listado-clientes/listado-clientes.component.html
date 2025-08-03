@@ -1,0 +1,30 @@
+<div id="container2">
+    <h2>Listado Clientes</h2>
+    @if (!clientes.length) {
+        <div>No hay Clientes por el momento</div>
+    }
+    @else {
+        <div class="mitabla">
+            <table class="table table-secondary table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">CIF</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Grupo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (cliente of clientes; track cliente) {
+                        <tr>
+                            <td>{{cliente.nombre}}</td>
+                            <td>{{cliente.cif}}</td>
+                            <td>{{cliente.dierccion}}</td>
+                            <td>{{cliente.grupo}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

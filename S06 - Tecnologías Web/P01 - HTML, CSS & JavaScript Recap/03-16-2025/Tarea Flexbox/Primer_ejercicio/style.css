@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    /*
+    Aquí se establede el tipo de diplay en Flex
+    La direffion en la que se van a acomodar los hijos del div será verticalmente (columna)
+    Hace que el tamaño minimo del body sea del 100% de la pantalla de la vista
+    Y quita el margen al establecerlo en 0
+    */
+}
+
+#name{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    /*
+    Establece una fuente que se usará dentro de la eqiqueta que tenga este id
+    Se establede el tipo de diplay en Flex
+    Como flex automáticamente se acomoda por fila (horizontal) centra el contenido en ese eje
+    */
+}
+
+#main{
+    display: flex;
+    flex: 1;
+    /*
+    Aquí se establede el tipo de diplay en Flex
+    Y luego en las características de flex (hijo), establece el espacio a ocupar como 1
+    */
+}
+
+#main>nav{
+    background: #EAD5D1;
+    order: 3;
+    /*
+    El color del fondo lo establece en "#D7E8D4" (antes de la actualizacion del color)
+    Lo acomoda en el tercer lugar (?)
+    */
+}
+
+#main>aside{
+    background: pink;
+    order: 2;
+    /*
+    El color del fondo lo establece en "beige" (antes de la actualizacion del color)
+    Lo acomoda en el segundo lugar (?)
+    */
+}
+
+#main>article{
+    order: 1;
+    flex: 1;
+    /*
+    Lo acomoda en el primer lugar (?)
+    En las características de flex (hijo), establece el espacio a ocupar como 1
+    */
+}
+
+#main>nav, #main>aside{
+    flex: 0 0 20vw;
+    /*
+    Establece el espacio a ocupar como 0 (no se expande (?))
+    Se mantiene su tamaño de manera fija
+    El tamaño base será el 20% del ancho de la ventana
+    */
+}
+
+header, footer{
+    background: crimson;
+    height: 20vh;
+    /*
+    El color del fondo lo establece en "yellowgreen" (antes de la actualizacion del color)
+    Y pone su altura (fija), al 20% del tamaño de la pantalla
+    */
+}
+
+header, footer, article, nav, aside{
+    padding: 1em;
+    /*
+    Establece el padding a 1rem (1 unidad de relativa)
+    */
+}
+
+*{
+    box-sizing: border-box;
+    /*
+    Se establece que el ancho y alto del elemento incluirán también el padding y el border
+    */
+}

@@ -1,0 +1,64 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: cadetblue;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#image{
+    border-radius: 10px;
+}
+
+.container{
+    margin: 75px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.alert-notify, #div-origin, #div-destiny{
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
+
+#div-origin, #div-destiny {
+    float: left;
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.alert-notify{
+    width: 20%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.alert-notify-middle{
+    width: 35%;
+}
+
+.notify-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    height: 100px;
+}

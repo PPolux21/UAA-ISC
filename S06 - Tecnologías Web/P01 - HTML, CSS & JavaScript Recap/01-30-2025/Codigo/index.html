@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 30/01/2025</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="container-form">
+
+        <div class="overlay"></div>
+
+        <div class="input-form">
+            <form action="">
+                <fieldset>
+                    <legend>Cita Médica</legend>
+                    <table>
+                        <tr>
+                            <td><label for="nombre">Nombre:</label></td>
+                            <td><input type="text" id="nombre"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="edad">Edad:</label></td>
+                            <td><input type="number" id="edad" min="18" max="85"></td>
+                        </tr>
+                        <tr>
+                            <td>Sexo:</td>
+                            <td>
+                                <input type="radio" name="sexo" value="dama" id="dama" checked>
+                                <label for="dama">Mujer</label>
+                                <input type="radio" name="sexo" value="caballero" id="caballero">
+                                <label for="caballero">Hombre</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="fecha">Fecha:</label></td>
+                            <td><input type="date" id="fecha"></td>
+                        </tr>
+                        <tr>
+                            <td><input onclick="show()" type="button" value="Ver" title="Ver Información"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        
+    </section>
+
+    <script src="js/function.js"></script>
+    
+</body>
+</html>

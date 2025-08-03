@@ -1,0 +1,15 @@
+<div class="main-content">
+    <h1>Biblioteca</h1>
+    <h3>José Luis Esponoza Sánchez</h3>
+    <div class="estanteria">
+        <app-form-libro (libroAgregado)="agregarLibro($event)"></app-form-libro>
+
+        <div class="books">
+            <ul>
+                @for (libro of libros; track libro.titulo){
+                    <li>{{libro.titulo}} - {{libro.autor}}</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

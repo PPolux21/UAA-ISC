@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.gohanComp{
+    background-color: #aaf !important;
+}
+
+.gotenComp{
+    background-color: #faa !important;
+}
+
+.gotenComp, .gohanComp{
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 200px;
+    margin-top: 70px;
+}

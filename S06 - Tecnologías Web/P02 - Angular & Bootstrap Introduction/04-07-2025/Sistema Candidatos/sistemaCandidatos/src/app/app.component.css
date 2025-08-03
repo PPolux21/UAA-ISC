@@ -1,0 +1,31 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor-main{
+    text-align: center;
+}
+
+.contenedor-votos{
+    border: 1px solid #777;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 40px 55px;
+}
+
+.contenedor-votos h2{
+    margin-top: 0;
+    margin-bottom: 55px;
+}
+
+.candidatos{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+header{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20vh;
+}

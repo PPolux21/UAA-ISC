@@ -1,0 +1,41 @@
+<body>
+  <br>
+  <h3 class="display-5">Datos del servicio de Angular</h3>
+  <h4 class="h4">José Luis Espinoza Sánchez</h4>
+  <br>
+  <br>
+  <div>
+    @if (clientesService.clientes.length > 0) {
+      <table class="table table-light table-bordered table-xl">
+        <thead class="table-light color">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Adress</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cte of clientesService.clientes; track cte) {
+            <tr>
+              <td>{{cte._id}}</td>
+              <td>{{cte.name}}</td>
+              <td>{{cte.gender}}</td>
+              <td>{{cte.age}}</td>
+              <td>{{cte.company}}</td>
+              <td>{{cte.email}}</td>
+              <td>{{cte.phone}}</td>
+              <td>{{cte.address}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <h5>No hay clientes</h5>
+    }
+  </div>
+</body>

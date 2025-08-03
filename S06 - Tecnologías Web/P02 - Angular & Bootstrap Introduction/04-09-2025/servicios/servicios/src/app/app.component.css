@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #40A294;
+    height: 100vh;
+}
+
+div{
+    color: white
+}
+
+.color{
+    background-color: rgba(239, 239, 239, 0.811);
+    text-align: center;
+}

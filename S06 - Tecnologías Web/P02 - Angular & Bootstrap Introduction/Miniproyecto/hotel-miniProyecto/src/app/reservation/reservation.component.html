@@ -1,0 +1,77 @@
+<body>
+<div class="contenedor-reservacion">
+  <h2>Formulario de reservación</h2>
+  <div class="contenido">
+    <form #formTemplate="ngForm" (ngSubmit)="guardarTemplate()" novalidate class="p-4 bg-light rounded">
+
+        <label class="form-label">Nombre del huésped:</label>
+        <input class="form-control mb-2" name="nombre" [(ngModel)]="templateData.nombre" required #nombre="ngModel">
+        @if (nombre.invalid && nombre.touched) {
+          <div class="text-danger mb-3">El nombre es obligatorio.</div>
+        }
+
+        <label class="form-label">Tipo de habitación:</label>
+        <select class="form-select mb-2" name="tipo" [(ngModel)]="templateData.tipo" required #tipo="ngModel" (change)="actualizarImagen()">
+          <option value="" disabled selected>Seleccione tipo</option>
+          @for (hab of tiposHabitacion; track hab.nombre; let i = $index) {
+            <option [value]="hab.nombre">{{ hab.nombre }}</option>
+          }
+        </select>
+
+        @if (tipo.invalid && tipo.touched) {
+          <div class="text-danger mb-3">Debe elegir una habitación.</div>
+        }
+
+        <label class="form-label">Noches de estadía:</label>
+        <input class="form-control mb-2" type="number" name="noches" [(ngModel)]="templateData.noches" required min="1" #noches="ngModel">
+        @if (noches.invalid && noches.touched) {
+          <div class="text-danger mb-3">Debe ingresar al menos 1 noche.</div>
+        }
+
+        <label class="form-label">Número de personas:</label>
+        <input class="form-control mb-2" type="number" name="personas" [(ngModel)]="templateData.personas" required min="1" #personas="ngModel">
+        @if (personas.invalid && personas.touched) {
+          <div class="text-danger mb-3">Debe haber al menos una persona.</div>
+        }
+
+        @for (servicio of serviciosExtras; track servicio.nombre) {
+          <label class="form-check mb-2">
+            <input
+              class="form-check-input me-2"
+              type="checkbox"
+              name="{{ servicio.nombre }}"
+              [(ngModel)]="templateData.extras[servicio.nombre]" />
+            <span class="form-check-label">{{ servicio.nombre }} (+${{ servicio.precio }} por noche)</span>
+          </label>
+        }
+
+        <label class="form-label">Fecha de entrada:</label>
+        <input class="form-control mb-2" type="date" name="fecha" [(ngModel)]="templateData.fecha" required #fecha="ngModel">
+        @if (fechaInvalida()) {
+          <div class="text-danger mb-3">La fecha no puede ser anterior al día actual.</div>
+        }
+        @if (fechaLejana()) {
+          <div class="text-danger mb-3">La fecha es muy lejana.</div>
+        }
+
+        <p><strong>Total estimado:</strong> {{ totalEstimado }} MXN</p>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="formTemplate.invalid || fechaInvalida()">Reservar</button>
+      </form>
+
+
+      @for (tipo of tiposHabitacion; track tipo.nombre) {
+          @if (tipo.nombre === templateData.tipo) {
+            <div style="margin-top: 1rem;">
+              <img
+                class="img-fluid rounded"
+                [src]="tipo.imagen"
+                alt="Imagen de la habitación"
+                style="width: 100%; object-fit: cover;">
+            </div>
+          }
+        }
+  </div>
+ </div>
+</body>
+

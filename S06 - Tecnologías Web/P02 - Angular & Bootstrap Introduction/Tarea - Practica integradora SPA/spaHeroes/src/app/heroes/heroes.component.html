@@ -1,0 +1,16 @@
+<h1 class="text-center text-light">Cars go vroom vroom</h1>
+<div class="card-group row row-cols-1 row-cols-lg-3 g-4">
+    @for (h of misHeroes; track h; let i = $index) {
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{h.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{h.nombre}}</h5>
+                <p class="card-text">{{h.bio}}</p>
+                <p class="card-text"><small class="text-muted">{{h.aparicion}}</small></p>
+            </div>
+            <a [routerLink]="['/carro',i]" class="mx-3 mb-3 btn btn-outline-primary btn-block">Ver MAS</a>
+        </div>
+    </div>
+    }
+</div>

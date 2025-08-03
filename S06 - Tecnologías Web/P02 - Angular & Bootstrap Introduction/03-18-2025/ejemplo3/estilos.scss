@@ -1,0 +1,19 @@
+@mixin fontStyle($color,$tam){
+    color: white;
+    font-size:$tam;
+    background-color: $color;
+    text-transform: uppercase;
+}
+
+h1{
+    @include fontStyle(red,40px);
+}
+
+p{
+    @include fontStyle(blue,18px);
+}
+
+body{
+    padding: 50px;
+    width: 900px;
+}

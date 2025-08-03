@@ -1,0 +1,12 @@
+img{
+    width: 15rem;
+}
+
+.socialMedia i{
+    font-size: 3rem;
+}
+
+.socialMedia a, .socialMedia a:visited{
+    text-decoration: none;
+    color: white;
+}

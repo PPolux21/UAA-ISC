@@ -1,0 +1,77 @@
+#carouselExample {
+    max-height: 700px;
+    overflow: hidden;
+}
+  
+#carouselExample .carousel-item {
+    height: 700px;
+}
+  
+#carouselExample video,
+#carouselExample img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+  
+.presentacion {
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.img-fondo {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+  
+.texto-cuadro {
+    max-width: 600px;
+    background-color: rgba(33, 33, 33, 0.7); 
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+  
+.ubicacion h2 {
+    font-family: 'Playfair Display', serif;
+}
+  
+.ubicacion img {
+    max-height: 400px;
+    object-fit: cover;
+}
+  
+.faq-section h2 {
+    font-weight: bold;
+    color: #212529;
+  }
+  
+.faq {
+    background-color: #f2efe7;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+  
+mat-panel-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.answer{
+    color: black;
+}
+  
+.reactive-form{
+    background-color: #f2efe7;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.reactive-item{
+    width: 50%;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Aplicación con Sockets</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>My Messenger</h1>
+    <h3>By: José Luis Espinoza Sánchez</h3>
+    <div class="chat">
+      <div id="messages"></div>
+      <form onsubmit="return addMessage(this)">
+          <input type="text" id="username" placeholder="Tu Nombre" />
+          <input type="text" id="texto" placeholder="Cuéntanos algo..." />
+          <input type="submit" value="Enviar!" />
+      </form>
+    </div>
+  </body>
+</html>

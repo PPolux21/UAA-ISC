@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica LocalStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>José Luis Espinoza Sánchez</h1>
+        <div class="container">
+            <div class="formulario-item">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" />
+            </div>
+
+            <div class="formulario-item">
+                <label for="nombre">Password:</label>
+                <input type="text" id="password" />
+            </div>
+
+            <input class="button" type="button" onclick="guardarDatos()" value="Guardar datos" />
+        </div>
+
+        <div class="container">
+            <p id="datos">Pulsa para ver tu nombre y tu password.</p>
+            <input class="button" type="button" onclick="recuperarDatos()" value="Recuperar datos" />
+        </div>
+    </main>
+    
+    <script src="scripts.js"></script>
+
+</body>
+</html>

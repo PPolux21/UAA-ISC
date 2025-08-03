@@ -1,0 +1,91 @@
+<section class="presentacion position-relative">
+  <img src="img/fondo-habitacion.jpg" class="img-fondo w-100" alt="Habitaciones">
+
+  <div class="texto-cuadro position-absolute top-50 end-0 translate-middle-y p-5 rounded-4 me-5">
+    <h2 class="mb-4 display-5 fw-bold animate__animated animate__lightSpeedInLeft " style="color: gold;">Habitaciones</h2>
+    <p class="fs-5 mb-0 animate__animated animate__rotateInUpRight">
+      Sumérgete en el descanso que mereces. Nuestras habitaciones han sido cuidadosamente diseñadas para ofrecer un equilibrio
+      perfecto entre confort y elegancia. Con vistas espectaculares, mobiliario de alta calidad y detalles que inspiran serenidad, 
+      cada espacio es un refugio pensado para que te desconectes del mundo y te conectes contigo mismo. Ya sea que viajes por placer o negocios, 
+      aquí encontrarás el lugar ideal para recargar cuerpo y mente.
+    </p>
+  </div>
+</section>
+
+<section class="m-5">
+<div class="card-group row row-cols-1 row-cols-lg-3 g-4 animate__animated animate__backInDown ">
+    @for (room of rooms; track room; let i = $index) {
+    <div class="col">
+      <mat-card class="card h-100 light-theme" appearance="outlined">
+        <img mat-card-image [src]="room.imagen" class="card-img-top" alt="{{room.tipo}}">
+        <mat-card-header>
+          <mat-card-title class="card-title text-bold"><strong>{{room.tipo}}</strong></mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="flex: 1 1 auto;">
+          <p class="card-text">{{room.descripcion}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-flat-button class="reserv-button" [routerLink]="getRoutes('reservation', i)">Reservar</a>
+          <!-- <a mat-flat-button class="reserv-button" [routerLink]="['/reservation', i]">Reservar</a> -->
+        </mat-card-actions>
+      </mat-card>        
+    </div>
+    }
+</div>
+</section>
+
+<section class="servicios-section my-5 px-4">
+<h2 class="text-center mb-4">Servicios de las habitaciones</h2>
+<mat-list class="servicios-grid">
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-wifi icono"></i>
+    <h5 class="text-success">Wifi</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-tv icono"></i>
+    <h5 class="text-success">Televisión</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-fan icono"></i>
+    <h5 class="text-success">Aire Acondicionado</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-utensils icono"></i>
+    <h5 class="text-success">Desayuno Incluido</h5>
+  </mat-list-item>
+
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-lock icono"></i>
+    <h5 class="text-success">Caja Fuerte</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-bell-concierge icono"></i>
+    <h5 class="text-success">Servicio a la Habitación</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-bath icono"></i>
+    <h5 class="text-success">Baño Privado</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-wine-glass icono"></i>
+    <h5 class="text-success">Minibar</h5>
+  </mat-list-item>
+
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-water icono"></i>
+    <h5 class="text-success">Vista al Mar</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-briefcase icono"></i>
+    <h5 class="text-success">Escritorio</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-wind icono"></i>
+    <h5 class="text-success">Secadora</h5>
+  </mat-list-item>
+  <mat-list-item class="servicio animate__animated animate__fadeInUp">
+    <i class="fas fa-phone icono"></i>
+    <h5 class="text-success">Teléfono</h5>
+  </mat-list-item>
+</mat-list>
+</section>

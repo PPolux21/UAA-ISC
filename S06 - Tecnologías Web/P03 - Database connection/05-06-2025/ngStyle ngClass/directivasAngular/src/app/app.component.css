@@ -1,0 +1,9 @@
+.italic{
+    font-style: italic;
+    color: blue;
+}
+
+.highlight{
+    background-color: yellow;
+    color: red;
+}
